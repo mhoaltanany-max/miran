@@ -35,10 +35,9 @@ jobs:
         run: |
           RES=android/app/src/main/res
           rm -rf $RES/mipmap-anydpi-v26
-          for d in mdpi:48 hdpi:72 xhdpi:96 xxhdpi:144 xxxhdpi:192; do
-            n=${d%%:*}; s=${d##*:}
+          for n in mdpi hdpi xhdpi xxhdpi xxxhdpi; do
             for f in ic_launcher ic_launcher_round ic_launcher_foreground; do
-              convert www/icons/icon-1024.png -resize ${s}x${s} $RES/mipmap-$n/$f.png
+              cp icons/mipmap-$n/ic_launcher.png $RES/mipmap-$n/$f.png
             done
           done
 
