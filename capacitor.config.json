@@ -1,0 +1,12 @@
+{
+  "appId": "com.mhoaltanany.miran",
+  "appName": "مران",
+  "webDir": "www",
+  "server": {
+    "url": "https://mhoaltanany-max.github.io/miran/",
+    "errorPath": "offline.html"
+  },
+  "android": {
+    "backgroundColor": "#EEEAFF"
+  }
+}
